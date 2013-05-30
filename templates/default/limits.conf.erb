@@ -1,0 +1,5 @@
+#THIS FILE IS MANAGED BY CHEF
+#<domain>      <type>  <item>         <value>
+<% node['jboss']['limits'].each do |l| %>
+<%= l[:domain]%>  <%= l[:type]%>  <%= l[:item].to_s%>  <%= l[:value].to_s %>
+<% end %>
